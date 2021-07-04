@@ -75,6 +75,7 @@ pipeline {
                     try {
                       sh "curl -s --connect-timeout 60 ${MASTER_INSTANCE_PUBLIC_IP}:8080"
                       echo "Successfully connected to Viz App."
+                      sleep(65) 
                       break
                     }
                     catch(Exception) {
